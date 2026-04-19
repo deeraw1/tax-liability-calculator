@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg:       #0a0e17;
+  --surface:  #0f1520;
+  --surface2: #111825;
+  --border:   #1a2233;
+  --border2:  #1e2d44;
+  --text:     #e8eaf0;
+  --muted:    #8a9ab8;
+  --faint:    #3a4a60;
+  --accent:   #0e7a5a;
+  --accent2:  #17c082;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.section-label {
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 1.8px;
+  text-transform: uppercase; color: var(--accent2); margin-bottom: 4px;
+}
+.section-title {
+  font-size: 1.2rem; font-weight: 700; color: var(--text);
+  padding-bottom: 12px; border-bottom: 1px solid var(--border);
+  margin-bottom: 24px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+input, select {
+  background: var(--surface2);
+  border: 1px solid var(--border2);
+  border-radius: 8px;
+  color: var(--text);
+  padding: 9px 12px;
+  font-size: 0.9rem;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.15s;
+}
+input:focus, select:focus { border-color: var(--accent2); }
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 9px 18px;
+  transition: opacity 0.15s, background 0.15s;
+}
+button:hover { opacity: 0.88; }
